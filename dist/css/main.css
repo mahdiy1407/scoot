@@ -39,6 +39,7 @@ body {
 .main__container {
   width: 1440px;
   height: 650px;
+  margin: 0 auto;
   background: url(../../img/background.jpg) no-repeat;
   position: relative; }
 
@@ -74,23 +75,6 @@ body {
 .footer__nav-section {
   display: flex;
   align-items: flex-start; }
-
-@media screen and (max-width: 1110px) {
-  .container {
-    max-width: 768px;
-    margin: 0 auto; }
-  .main__container {
-    margin: 0 auto; }
-  .main__title {
-    max-width: 573px;
-    text-align: center;
-    margin: 0 auto; }
-  .main__description {
-    text-align: center;
-    margin: 0 auto; }
-    .main__description::before {
-      content: '';
-      display: none; } }
 
 .about-bakground {
   width: 1440px;
@@ -246,6 +230,21 @@ body {
 .main__item:nth-child(3)::after {
   background: url(../../img/biker.svg) #FCB72B no-repeat center; }
 
+.main__item-title {
+  font-family: "SpaceMono-Bold" monospace;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  font-size: 24px;
+  color: #495567; }
+
+.main__item-description {
+  font-family: "LexendDeca-Regular" sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  color: #939CAA; }
+
 .main__benefits-list {
   padding: 0px;
   margin: 0;
@@ -260,10 +259,10 @@ body {
     content: '';
     width: 740px;
     height: 150px;
-    background: url(../../img/big_path.svg);
+    background: url(../../img/big_path2.svg);
     position: absolute;
-    right: -165px;
-    bottom: 0px;
+    left: -565px;
+    top: 0px;
     z-index: 1; }
   .main__benefits-item::after {
     content: '';
@@ -272,26 +271,25 @@ body {
     border-radius: 50%;
     background-color: #E5ECF4;
     position: absolute;
-    left: calc(100% + 64px); }
+    right: calc(100% + 64px); }
 
-.main__benefits-item:nth-child(2) {
+.main__benefits-item:nth-child(2n - 1) {
   flex-direction: row-reverse; }
-  .main__benefits-item:nth-child(2)::before {
+  .main__benefits-item:nth-child(2n - 1)::before {
     content: '';
     width: 740px;
     height: 150px;
-    background: url(../../img/big_path2.svg);
+    background: url(../../img/big_path.svg);
     position: absolute;
-    left: -565px;
-    top: 0; }
-  .main__benefits-item:nth-child(2)::after {
+    left: 550px;
+    top: 300px; }
+  .main__benefits-item:nth-child(2n - 1)::after {
     content: '';
     position: absolute;
-    left: -510px; }
+    right: -510px; }
 
 .benefits__section {
-  width: 445px;
-  overflow-x: hidden; }
+  width: 445px; }
 
 .benefits-item__title {
   font-family: "SpaceMono-Bold" monospace;
@@ -598,3 +596,109 @@ body {
 
 #svg:hover {
   fill: #E5ECF4; }
+
+@media screen and (max-width: 1110px) {
+  .container {
+    max-width: 768px;
+    margin: 0 auto;
+    overflow-x: hidden; }
+  .main__container {
+    margin: 0 auto;
+    background: url(../../img/background-tablet.jpg); }
+  .main__intro-link {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center; }
+  .main__title {
+    max-width: 573px;
+    text-align: center;
+    margin: 0 auto; }
+  .main__description {
+    text-align: center;
+    margin: 0 auto; }
+    .main__description::before {
+      content: '';
+      display: none; }
+    .main__description::after {
+      left: -127px;
+      top: 473px; }
+  .main__link {
+    margin-top: 0px;
+    position: absolute;
+    bottom: 0; }
+  .main__container-list {
+    margin-top: 122px; }
+  .main__list {
+    display: block; }
+    .main__list::before {
+      width: 512px;
+      transform: rotate(90deg);
+      top: 125px; }
+  .main__item {
+    margin-left: 272px; }
+    .main__item::after {
+      display: flex;
+      justify-content: space-between;
+      top: 300px;
+      left: 43px;
+      bottom: 23px; }
+  .main__benefits-item {
+    display: block;
+    text-align: center; }
+    .main__benefits-item::before {
+      left: -375px; }
+    .main__benefits-item::after {
+      top: 0;
+      right: 668px; }
+  .main__benefits-item:nth-child(2n - 1)::before {
+    left: 40px; }
+  .main__benefits-item:nth-child(2n - 1)::after {
+    top: 0;
+    left: 673px; }
+  .benefits__section {
+    text-align: center;
+    margin: 0 auto; }
+  .footer__container {
+    align-items: center;
+    margin-top: 104px; }
+  .footer__section {
+    display: block;
+    text-align: center;
+    height: 300px; }
+  .footer__title {
+    padding: 62px 0px; }
+  .footer__section-link {
+    padding: 0;
+    top: 198px;
+    right: 198px; }
+  .about-bakground {
+    background: url(../../img/about__backgrond-tablet.jpg) no-repeat; }
+  .cicle-svg {
+    right: -31px; }
+  .about__value-list {
+    flex-direction: column; }
+  .about__value-item {
+    margin: 0 auto; }
+  .about__faq-item {
+    flex-direction: column; }
+  .about__faq-tilte {
+    text-align: center;
+    margin-bottom: 32px; }
+  .Careers-background {
+    background: url(../../img/about__backgrond-tablet.jpg) no-repeat; }
+  .careers-container {
+    margin-top: 120px; }
+  .careers__workers {
+    padding: 32px 49px 35px 25px; }
+  .location-container {
+    width: 689px;
+    margin: 144px auto 64px; }
+  .location-img {
+    width: 689px; }
+  .location-container-description {
+    flex-direction: column;
+    text-align: center; }
+  .location-title {
+    margin-bottom: 40px; }
+  .location-description {
+    margin-bottom: 19px; } }
